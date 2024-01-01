@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: python-basic-170408704
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: python-basic-170408704
+    app.kubernetes.io/part-of: test-app-170408704
+  name: python-basic-170408704lxme
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: python-basic-170408704
+    weight: null
+status: {}
